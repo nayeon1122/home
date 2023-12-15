@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,14 +51,36 @@
 		<script src = "introducing_page/js/bootstrap.bundle.min.js"></script>
 
 		<script>            <!--새로 만든 함수-->
-			var win = null ;
-			function show_HTML() {
-			if (win==null || win.closed)
-			win = window.open("", "out_win", width=400, heifht=300);
-			var text = document.getElementById("src_code").value;
-			win.document.open();
-			win.document.write(text);
-			win.document.close() }
+
+		var win = null;
+
+		function show_HTML() {
+    	if (win == null || win.closed) {
+        	// 수정: 윈도우 속성을 나타내는 문자열로 수정
+        win = window.open("", "_self");
+    	}
+
+    	// 결과를 표시할 DIV
+        var resultContainer = document.getElementById("result-container");
+
+
+
+    function show_HTML2(htmlContent) {
+        // 결과를 표시할 DIV 초기화
+        var resultContainer = window.opener.document.getElementById("result-container");
+        resultContainer.innerHTML = '';
+
+        // 결과를 표시할 DIV에 HTML 내용 추가
+        resultContainer.innerHTML = htmlContent;
+
+    		}
+		}
+
+		function openInSameWindow(htmlFileHref) {
+        // 새로운 창이 아닌 현재 창에서 새로운 HTML 파일 열기
+        window.location.href = htmlFileHref;
+    }
+
 		</script>
 	</head>
 	<body>
@@ -204,9 +226,15 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						</div>
 					</div>
 					<div class="row row-pt-md">
-						<div class="col-sm-4 text-center animate-box"> <!-- bs5클래스 -> text-center (7)-->
-							<div class="services color-1">
+						<div class = "d-inline-flex mb-3">
+									<a href = "register.html"> <input class = "p-2 flex-fill bg-info" value = "과제1" onclick = "show_HTML()"> </a>
+									<a href = "report2.html"> <input class = "p-2 flex-fill bg-info" value = "과제2" onclick = "show_HTML()"> </a>
+									<a href = "report3.html"> <input class = "p-2 flex-fill bg-info" value = "과제3" onclick = "show_HTML()"> </a>
+									<a href = "report4.html"> <input class = "p-2 flex-fill bg-info" value = "과제4" onclick = "show_HTML()"> </a>
+						</div>
 
+						<!-- <div class="col-sm-4 text-center animate-box"> //bs5클래스 -> text-center (7)
+							<div class="services color-1">
 								<div class="desc">
 									<p class="h3">project 1</p>
 									<p><a href="register.html">과제1</a></p>
@@ -215,7 +243,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						</div>
 						<div class="col-sm-4 text-center animate-box">
 							<div class="services color-2">
-								<div class="desc"> <!--mycss-->
+								<div class="desc"> //mycss
 									<p class="h3">project 2</p>
 										<p><a href="report2.html">과제2</a></p>
 								</div>
@@ -235,8 +263,9 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 									<p class=" h3">project 4</p>
 									<p><a href = "report4.html">과제4</a></p>
 								</div>
-							</div>
-						</div>
+							  </div>
+						   </div>-->
+
 						<!--<div class="col-md-4 text-center animate-box">
 							<div class="services color-5">
 
