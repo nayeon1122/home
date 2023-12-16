@@ -235,9 +235,17 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
         				document.getElementById('iframe-container').src = assignmentName;
 						// iframe의 크기 조절
         				document.getElementById('iframe-container').style.height = '1000px'; /* 원하는 높이로 조절하세요. */
-							document.getElementById('iframe-container').style.width = '1000px';
+							document.getElementById('iframe-container').style.width = '100%';
     					}
 						</script>
+						<style>
+							@media (max-width: 576px) {
+        				.iframe-container {
+            			height: 100%; /* sm 화면 크기에 맞게 조절 */
+        				}
+    					}
+						</style>
+
 						<!-- iframe을 통해 HTML 파일을 로드할 영역 -->
 						<iframe id="iframe-container" src=""></iframe>
 					</div>
