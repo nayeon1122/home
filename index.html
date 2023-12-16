@@ -183,8 +183,9 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 										<p class = "h3">Here's my Instagram account!</p>
 										<a href="https://instagram.com/zen__please?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="btn-hire">Instagram</a>
 									</div>
-									<p>and here's some of my instagram pic!</p>
-									<div data-include-path="mypictures.html"></div>
+									<p>click yellow button for my instagram pictures!</p>
+									<p><button class = "btn-warning" onclick="loadAssignment2('mypictures.html')">insta photo</button></p>
+									<iframe id="carousel-container" src=""></iframe>
 								</div>
 							</div>
 						</div>
@@ -221,6 +222,14 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						// iframe의 크기 조절
         				document.getElementById('iframe-container').style.height = '1000px'; /* 원하는 높이로 조절하세요. */
 							document.getElementById('iframe-container').style.width = '100%';
+    					}
+
+						function loadAssignment2(assignmentName) {
+        					// iframe의 src 속성에 해당 HTML 파일 경로 설정
+        				document.getElementById('carousel-container').src = assignmentName;
+						// iframe의 크기 조절
+        				document.getElementById('carousel-container').style.height = '1000px'; /* 원하는 높이로 조절하세요. */
+							document.getElementById('carousel-container').style.width = '100%';
     					}
 						</script>
 
