@@ -41,7 +41,7 @@
 	<link rel="stylesheet" href="introducing_page/css/owl.theme.default.min.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="introducing_page/css/style.css">
-	<link rel="stylesheet" href="introducing_page/css/mycss.css">
+	<link rel="stylesheet" href="introducing_page/css/mycss.css"> <!--나의 css파일 -->
 	<!-- Modernizr JS -->
 	<script src="introducing_page/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -49,13 +49,7 @@
 	<script src="introducing_page/js/respond.min.js"></script>
 	<![endif]-->
 		<script src = "js/bootstrap.bundle.min.js"></script>
-		<style>
-			@media (max-width: 576px) {
-				.iframe-container {
-					height: 100%; /* sm 화면 크기에 맞게 조절 */
-				}
-			}
-		</style>
+
 	</head>
 	<body>
 	<div id="colorlib-page">
@@ -186,11 +180,12 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 							<div class="row">
 								<div class="col-sm-12 animate-box" data-animate-effect="fadeInLeft">
 									<div class="hire">
-										<h2>Here's my Instagram account!</h2>
+										<p class = "h3">Here's my Instagram account!</p>
 										<a href="https://instagram.com/zen__please?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="btn-hire">Instagram</a>
 									</div>
 									<p>and here's some of my instagram pic!</p>
-
+									<div data-include-path="mypictures.html"></div>
+									<script src="js/get_tags.js"></script>
 								</div>
 							</div>
 						</div>
@@ -211,26 +206,26 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						<div class="flex-container">
     						<!-- 과제1 버튼 - iframe에 해당 HTML 파일 로드 -->
 							<div class="row">
-								<div class = "col-sm-6">  <!--2단 배치 그리드 활용-->
-    								<div class="flex-item">
+								<div class = "col-6">  <!--2단 배치 그리드 활용-->
+    								<div class="flex-item flex-fill">
 										<button onclick="loadAssignment('register.html')">과제1</button>
    						 			</div>
 								</div>
-									<div class = "col-sm-6">
+									<div class = "col-6">
     								<!-- 과제2 버튼 - iframe에 해당 HTML 파일 로드 -->
-    								<div class="flex-item">
+    								<div class="flex-item flex-fill">
         								<button onclick="loadAssignment('report2.html')">과제2</button>
     								</div>
 									</div>
-								<div class = "col-sm-6">
+								<div class = "col-6">
     							<!-- 과제3 버튼 - iframe에 해당 HTML 파일 로드 -->
-    							<div class="flex-item">
+    							<div class="flex-item flex-fill">
         							<button onclick="loadAssignment('report3.html')">과제3</button>
     							</div>
 								</div>
-								<div class = "col-sm-6">
+								<div class = "col-6">
 									<!-- 과제4 버튼 - iframe에 해당 HTML 파일 로드 -->
-									<div class="flex-item">
+									<div class="flex-item flex-fill">
         							<button onclick="loadAssignment('report4.html')">과제4</button>
 									</div>
 								</div>
@@ -238,6 +233,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 							</div>
 
 						<script>
+
 							function loadAssignment(assignmentName) {
         					// iframe의 src 속성에 해당 HTML 파일 경로 설정
         				document.getElementById('iframe-container').src = assignmentName;
