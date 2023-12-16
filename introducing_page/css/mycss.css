@@ -44,3 +44,6 @@
 .colorlib-feature .colorlib-text {
     padding-left: 120px;
     width: 100%; }
+
+.col-mb {
+  margin-bottom: 10px; !important; }

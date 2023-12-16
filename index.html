@@ -202,35 +202,17 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						</div>
 					</div>
 					<div class="row row-pt-md">
-						<div class="flex-container">
     						<!-- 과제1 버튼 - iframe에 해당 HTML 파일 로드 -->
-							<div class="row">
-								<div class = "col-6">  <!--2단 배치 그리드 활용-->
-    								<div class="flex-item flex-fill">
-										<button onclick="loadAssignment('register.html')">과제1</button>
-   						 			</div>
-								</div>
-									<div class = "col-6">
+							<div class = "btn-group">
+										<button  class = "btn-primary" onclick="loadAssignment('register.html')">과제1</button>
     								<!-- 과제2 버튼 - iframe에 해당 HTML 파일 로드 -->
-    								<div class="flex-item flex-fill">
-        								<button onclick="loadAssignment('report2.html')">과제2</button>
-    								</div>
-									</div>
-								<div class = "col-6">
+        								<button class = "btn-warning" onclick="loadAssignment('report2.html')">과제2</button>
     							<!-- 과제3 버튼 - iframe에 해당 HTML 파일 로드 -->
-    							<div class="flex-item flex-fill">
-        							<button onclick="loadAssignment('report3.html')">과제3</button>
-    							</div>
-								</div>
-								<div class = "col-6">
-									<!-- 과제4 버튼 - iframe에 해당 HTML 파일 로드 -->
-									<div class="flex-item flex-fill">
-        							<button onclick="loadAssignment('report4.html')">과제4</button>
-									</div>
-								</div>
-							 </div>
-							</div>
+        							<button class = "btn-success" onclick="loadAssignment('report3.html')">과제3</button>
 
+									<!-- 과제4 버튼 - iframe에 해당 HTML 파일 로드 -->
+        							<button class = "btn-danger" onclick="loadAssignment('report4.html')">과제4</button>
+							   </div><br>
 						<script>
 
 							function loadAssignment(assignmentName) {
@@ -308,7 +290,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+						<div class="col-sm-6 animate-box" data-animate-effect="fadeInLeft"> <!--2단 배치-->
 							<div class="progress-wrap">
 								<h3>HTML5</h3>
 								<div class="progress">
