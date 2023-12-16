@@ -36,7 +36,11 @@
             display: flex;
         }
 
-
-    .flex-item {
+.flex-item {
             margin: 5px;
         }
+
+
+.colorlib-feature .colorlib-text {
+    padding-left: 120px;
+    width: 100%; }

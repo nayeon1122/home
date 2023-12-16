@@ -48,15 +48,14 @@
 	<!--[if lt IE 9]>
 	<script src="introducing_page/js/respond.min.js"></script>
 	<![endif]-->
-		<script src = "introducing_page/js/bootstrap.bundle.min.js"></script>
-
-		<script>            <!--새로 만든 함수-->
-			function loadAssignment(assignmentName) {
-        // iframe의 src 속성에 해당 HTML 파일 경로 설정
-        document.getElementById('iframe-container').src = assignmentName;
+		<script src = "js/bootstrap.bundle.min.js"></script>
+		<style>
+			@media (max-width: 576px) {
+				.iframe-container {
+					height: 100%; /* sm 화면 크기에 맞게 조절 */
+				}
 			}
-
-		</script>
+		</style>
 	</head>
 	<body>
 	<div id="colorlib-page">
@@ -64,9 +63,9 @@
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
-				<div class="author-img author-img2 img-rounded" style="background-image: url(introducing_page/images/mypic.jpeg);"></div> <!--bs5클래스 -> img-rounded (1)-->
-				<h1 id="colorlib-logo text-center text-capitalize"><a href="index.html">Nayeon Ko</a></h1> <!--bs5클래스 -> text-center, text-capitalize (2),(3)-->
-				<span class="position text-uppercase">university student in south korea</span> <!--bs5클래스 -> text-uppercase (4)-->
+				<div class="author-img author-img2 img-rounded" style="background-image: url(introducing_page/images/mypic.jpeg);"></div>
+				<h1 id="colorlib-logo text-center text-capitalize"><a href="index.html">Nayeon Ko</a></h1>
+				<span class="position text-uppercase">university student in south korea</span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
 				<div id="navbar">
@@ -74,7 +73,7 @@
 							<li><a class ="dropdown dropdown-toggler" data-bs-toggle="dropdown" href="index.html"></a></li>
 							<li><a class="dropdown-item" data-nav-section="home" href="#">Home</a></li>
 						<li><a class="dropdown-item" href="#" data-nav-section="about">About</a></li>
-						<li><a class="dropdown-item" data-nav-section="services">Services</a></li>
+						<li><a class="dropdown-item" data-nav-section="report">Report</a></li>
 						<li><a class="dropdown-item" data-nav-section="skills">Skills</a></li>
 						<li><a class="dropdown-item" data-nav-section="education">Education</a></li>
 						<li><a class="dropdown-item" data-nav-section="experience">Experience</a></li>
@@ -125,14 +124,19 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
-						   					<p class="h1">高</p> <!--bs5클래스 -> h1 (5)-->
-											<p class="h1">奈</p>
-											<p class="h1">延</p>
+											<div class = "card" style = "width: 400px">
+											  <img class = "card-img-top"	src = "introducing_page/images/mypic2.jpg" style = "width:100%">
+											  <div class = "card-body">
+												  <p class = "card-title text-dark"> 고나연(高奈延)</p>
+												  <p class="card-text text-capitalize text-dark"> a student majoring in in information statistics, and library information science</p>
+												  <a href = "https://nayeon1122.github.io/home/" class="btn btn-primary text-dark">See Profile</a>
+											</div>
 										</div>
 					   				</div>
 					   			</div>
 					   		</div>
-				   		</div>
+				   		  </div>
+						</div>
 				   	</li>
 				  	</ul>
 			  	</div>
@@ -146,14 +150,14 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 								<div class="col-sm-12">
 									<div class="about-desc">
 										<span class="heading-meta">About me</span>
-										<h2 class="colorlib-heading">Let me introduce myself</h2>
+										<h2 class="colorlib-heading mb-4">Let me introduce myself</h2>
 										<p><strong>Hi, I'm nayeon ko</strong></p>
-										<p>Birth: 02.08.27</p>
-										<p>Age: 22</p>
-										<p>MBTI: INTP</p>
-										<p>2018~2020: Ewha Womans University High School</p>
-										<p>2021~: Dongduk Womans University </p>
-										<p>Major: Library Information Science</p>
+										<p class="text-capitalize">birth: 02.08.27</p>
+										<p class="text-capitalize">age: 22</p>
+										<p class="text-uppercase">mbti: intp</p>
+										<p class="text-capitalize">2018~2020: ewha womans university high school</p>
+										<p class="text-capitalize">2021~: dongduk womans university </p>
+										<p class="text-capitalize">Major: library information science</p>
 									</div>
 								</div>
 							</div>
@@ -185,6 +189,8 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 										<h2>Here's my Instagram account!</h2>
 										<a href="https://instagram.com/zen__please?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="btn-hire">Instagram</a>
 									</div>
+									<p>and here's some of my instagram pic!</p>
+
 								</div>
 							</div>
 						</div>
@@ -192,12 +198,13 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				</div>
 			</section>
 			
-			<section class="colorlib-services" data-section="services">
+			<section class="colorlib-services" data-section="report">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3 col-sm-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta text-start">What I did in web programming course</span> <!-- bs5클래스 -> text-start (6)-->
-							<h2 class="colorlib-heading text-start">Here are some of my project</h2>
+							<span class="heading-meta text-start">What I did in web programming course</span>
+							<h2 class="colorlib-heading mb-4 text-start">Here are some of my project</h2>
+							<p>click button for checking!</p>
 						</div>
 					</div>
 					<div class="row row-pt-md">
@@ -229,8 +236,9 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 								</div>
 							 </div>
 							</div>
+
 						<script>
-    					function loadAssignment(assignmentName) {
+							function loadAssignment(assignmentName) {
         					// iframe의 src 속성에 해당 HTML 파일 경로 설정
         				document.getElementById('iframe-container').src = assignmentName;
 						// iframe의 크기 조절
@@ -238,13 +246,6 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 							document.getElementById('iframe-container').style.width = '100%';
     					}
 						</script>
-						<style>
-							@media (max-width: 576px) {
-        				.iframe-container {
-            			height: 100%; /* sm 화면 크기에 맞게 조절 */
-        				}
-    					}
-						</style>
 
 						<!-- iframe을 통해 HTML 파일을 로드할 영역 -->
 						<iframe id="iframe-container" src=""></iframe>
@@ -283,7 +284,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3 col-sm-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">My Specialty</span>
-							<h2 class="colorlib-heading animate-box">My Skills</h2>
+							<h2 class="colorlib-heading mb-4 animate-box">My Skills</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -365,7 +366,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<div class="row">
 						<div class="col-sm-6 col-md-offset-3 col-sm-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta text-start">Education</span>
-							<h2 class="colorlib-heading animate-box text-start">Education</h2>
+							<h2 class="colorlib-heading mb-4 animate-box text-start">Education</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -419,7 +420,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 									    <div class="panel-body">
 													<ul>
-														<li class="list-unstyled">I learned how to ask questions in the academic information source, how to research researchers, and academic interviews.</li> <!-- bs5클래스 list-unstyled(8)-->
+														<li class="list-unstyled">I learned how to ask questions in the academic information source, how to research researchers, and academic interviews.</li>
 														<li class="list-unstyled">I learned about the role of librarians as educators in libraries, the artisan of the introduction of digital technology.</li>
 													</ul>
 									        </div>
@@ -453,7 +454,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3 col-sm-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">Experience</span>
-							<h2 class="colorlib-heading animate-box">trip Experience</h2>
+							<h2 class="colorlib-heading mb-4 animate-box">trip Experience</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -542,12 +543,12 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3 col-sm-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta text-start">My Position</span>
-							<h2 class="colorlib-heading animate-box text-start">Recent Photo Exhibition work</h2>
+							<h2 class="colorlib-heading mb-4 animate-box text-start">Recent Photo Exhibition work</h2>
 						</div>
 					</div>
 					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 						<div class="col-sm-12">
-							<p class="work-menu"><span><a href="https://blog.naver.com/dongduksasim" class="active">Blog Editing staff</a></span> <span><a href="https://www.instagram.com/_purenjari_/">Photo Club Executive</a></span></p> <!--bs5클래스 -> active (9)-->
+							<p class="work-menu"><span><a href="https://blog.naver.com/dongduksasim" class="active">Blog Editing staff</a></span> <span><a href="https://www.instagram.com/_purenjari_/">Photo Club Executive</a></span></p>
 						</div>
 					</div>
 					<div class="row">
@@ -556,7 +557,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 								<div class="desc">
 									<div class="con">
 										<span class="text-white">Work 01- 휴게의 계절</span>
-										<span class="h6">fall</span> <!-- bs5클래스 -> h6(10) -->
+										<span class="h6">fall</span>
 
 									</div>
 								</div>
@@ -631,7 +632,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3 col-sm-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">Read</span>
-							<h2 class="colorlib-heading">Recent Blog</h2>
+							<h2 class="colorlib-heading mb-4">Recent Blog</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -679,7 +680,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<div class="row">
 						<div class="col-sm-6 col-sm-offset-3 col-sm-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">Get in Touch</span>
-							<h2 class="colorlib-heading">Contact</h2>
+							<h2 class="colorlib-heading mb-4">Contact</h2>
 						</div>
 					</div>
 					<div class="row">

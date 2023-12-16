@@ -55,10 +55,6 @@ figure {
       figure figcaption {
         width: 100%; } }
 
-::-webkit-selection {
-  color: #fff;
-  background: #2c98f0; }
-
 ::-moz-selection {
   color: #fff;
   background: #2c98f0; }
@@ -228,7 +224,7 @@ figure {
 
 #colorlib-hero {
   min-height: 500px;
-  background: #fff url(../images/loader.gif) no-repeat center center;
+  background: #fff url(../images/white.png) no-repeat center center;
   width: 100%;
   float: left;
   margin-bottom: 10em;
@@ -401,7 +397,6 @@ body.offcanvas {
 
 .colorlib-heading {
   font-size: 18px;
-  margin-bottom: 4em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -826,9 +821,6 @@ body.offcanvas {
       @media screen and (max-width: 1200px) {
         .colorlib-feature .colorlib-icon i {
           font-size: 40px; } }
-  .colorlib-feature .colorlib-text {
-    padding-left: 120px;
-    width: 100%; }
     .colorlib-feature .colorlib-text h2, .colorlib-feature .colorlib-text h3 {
       margin: 0;
       padding: 0; }
@@ -877,7 +869,6 @@ body.offcanvas {
   .blog-entry .desc h3 {
     font-size: 16px;
     margin-bottom: 25px;
-    line-height: auto;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -996,7 +987,7 @@ body.offcanvas {
         opacity: 1;
         background: rgba(0, 0, 0, 0.4); }
         .project .desc h3 {
-          font-style: 28px;
+          font-size: 28px;
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
           color: #000; }
